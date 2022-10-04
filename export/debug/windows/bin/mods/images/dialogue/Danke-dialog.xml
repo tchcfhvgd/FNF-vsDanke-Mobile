@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Danke-dialog.png">
+	<!-- Created with Adobe Animate version 16.5.1.104 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Danke00000" x="10" y="10" width="357" height="354"/>
+	<SubTexture name="Danke10000" x="387" y="10" width="361" height="353"/>
+	<SubTexture name="Danke20000" x="10" y="384" width="365" height="364"/>
+</TextureAtlas>

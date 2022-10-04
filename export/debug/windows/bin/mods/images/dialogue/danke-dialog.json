@@ -1,0 +1,50 @@
+{
+	"position": [
+		110,
+		90
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "Danke-dialog",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Danke0",
+			"idle_offsets": [
+				-4,
+				1
+			],
+			"loop_name": "Danke0",
+			"idle_name": "Danke0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Danke1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Danke1",
+			"idle_name": "Danke1"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Danke2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Danke2",
+			"idle_name": "Danke2"
+		}
+	]
+}

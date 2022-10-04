@@ -1,0 +1,40 @@
+{
+	"songs": [
+    [
+      "Party-Panic2.0",
+      "icon-Xmas-Danke",
+      [
+        146,
+        113,
+        253
+      ]
+    ],
+    [
+      "Raspberry-PIE",
+      "icon-Xmas-Danke",
+      [
+        146,
+        113,
+        253
+      ]
+    ]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "danke",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "week1",
+	"weekName": "week1",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"startUnlocked": true
+}

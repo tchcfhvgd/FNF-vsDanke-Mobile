@@ -1,0 +1,37 @@
+{
+	"position": [
+		150,
+		90
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "KR-dialog",
+	"animations": [
+		{
+			"loop_offsets": [
+				2,
+				0
+			],
+			"anim": "KR0",
+			"idle_offsets": [
+				0,
+				1
+			],
+			"loop_name": "KR0",
+			"idle_name": "KR0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "KR1",
+			"idle_offsets": [
+				0,
+				1
+			],
+			"loop_name": "KR1",
+			"idle_name": "KR1"
+		}
+	]
+}

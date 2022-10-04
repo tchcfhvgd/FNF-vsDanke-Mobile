@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="KR-dialog.png">
+	<!-- Created with Adobe Animate version 16.5.1.104 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="KR00000" x="10" y="10" width="305" height="351"/>
+	<SubTexture name="KR10000" x="10" y="381" width="305" height="351"/>
+</TextureAtlas>
