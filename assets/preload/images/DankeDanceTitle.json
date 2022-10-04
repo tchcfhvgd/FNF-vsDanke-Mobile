@@ -5,6 +5,6 @@
   "starty": 530,
   "gfx": 380,
   "gfy": 0,
-  "backgroundSprite": "BGBackground",
+  "backgroundSprite": "DankeBackground",
   "bpm": 75
 }

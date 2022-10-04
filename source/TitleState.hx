@@ -245,6 +245,7 @@ class TitleState extends MusicBeatState
 
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
+	var _shiningFX:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
@@ -347,6 +348,16 @@ class TitleState extends MusicBeatState
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		logoBl.shader = swagShader.shader;
+
+		_shiningFX = new FlxSprite(0, 0);
+		_shiningFX.frames = Paths.getSparrowAtlas('BGTitleFX');
+		_shiningFX.animation.addByPrefix('BGTitleFX', 'BGTitleFX', 24,true);
+		_shiningFX.animation.play('BGTitleFX');
+		_shiningFX.scale.set(1.25,1.25);
+		_shiningFX.screenCenter();
+		add(_shiningFX);
+		_shiningFX.shader = swagShader.shader;
+		_shiningFX.antialiasing = ClientPrefs.globalAntialiasing;
 
 		titleText = new FlxSprite(titleJSON.startx, titleJSON.starty);
 		#if (desktop && MODS_ALLOWED)
@@ -633,8 +644,6 @@ class TitleState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-
-		trace(sickBeats);
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);

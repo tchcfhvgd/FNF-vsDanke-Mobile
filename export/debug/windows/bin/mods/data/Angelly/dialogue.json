@@ -1,60 +1,60 @@
 {
 	"dialogue": [
-		{
-			"expression": "talk",
-			"text": "Oh? Is there still dialogue standup in the discarded material?",
-			"boxState": "normal",
-			"sound": "",
-			"speed": 0.05,
-			"portrait": "bg-dialog"
-		},
-		{
-			"expression": "talk",
-			"text": "I drew them all...",
-			"boxState": "normal",
-			"sound": "",
-			"speed": 0.05,
-			"portrait": "Danke-dialog"
-		},
+    {
+      "expression": "talk",
+      "text": "Huh, an abandoned mod with fully colored portrait dialogue?",
+      "boxState": "normal",
+      "sound": "",
+      "speed": 0.05,
+      "portrait": "bg-dialog"
+    },
+    {
+      "expression": "talk",
+      "text": "Well, since I already drew them ...",
+      "boxState": "normal",
+      "sound": "",
+      "speed": 0.05,
+      "portrait": "Danke-dialog"
+    },
 		{
 			"expression": "Danke1",
-			"text": "Then, let's show them all!",
+			"text": "So why not I just show them to everybody!",
 			"boxState": "normal",
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "Danke-dialog"
 		},
-		{
-			"expression": "talk",
-			"text": "Speaking of which, why am I working here as a sales clerk?",
-			"boxState": "normal",
-			"sound": "",
-			"speed": 0.05,
-			"portrait": "KR-dialog"
-		},
-		{
-			"expression": "KR1",
-			"text": "If I can start, I'll link the audio power.",
-			"boxState": "normal",
-			"sound": "",
-			"speed": 0.05,
-			"portrait": "KR-dialog"
-		},
-		{
-			"expression": "BG1",
-			"text": "No problem!(Bepp!)",
-			"boxState": "normal",
-			"sound": "",
-			"speed": 0.05,
-			"portrait": "bg-dialog"
-		},
-		{
-			"expression": "Danke2",
-			"text": "Thank you!",
-			"boxState": "normal",
-			"sound": "",
-			"speed": 0.05,
-			"portrait": "Danke-dialog"
-		}
+    {
+      "expression": "talk",
+      "text": "Hold on, why am I being the hottress standing at the counter all of a sudden?",
+      "boxState": "normal",
+      "sound": "",
+      "speed": 0.05,
+      "portrait": "KR-dialog"
+    },
+    {
+      "expression": "KR1",
+      "text": "Fine for me, I will drop the beat if you guys ready!",
+      "boxState": "normal",
+      "sound": "",
+      "speed": 0.05,
+      "portrait": "KR-dialog"
+    },
+    {
+      "expression": "BG1",
+      "text": "Okie dokie!(Beep!)",
+      "boxState": "normal",
+      "sound": "",
+      "speed": 0.05,
+      "portrait": "bg-dialog"
+    },
+    {
+      "expression": "Danke2",
+      "text": "Thank you!\nLet's Begin!",
+      "boxState": "normal",
+      "sound": "",
+      "speed": 0.05,
+      "portrait": "Danke-dialog"
+    }
 	]
 }

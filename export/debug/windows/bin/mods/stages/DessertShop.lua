@@ -24,7 +24,7 @@ function onCreate()
 
 	makeLuaSprite('Lamp', 'stage/Lamp', -780, -820);
 	scaleObject('Lamp', 1, 1);
-	setScrollFactor('Lamp', 1.6, 1.6);
+	setScrollFactor('Lamp', 1.6, 1.7);
 
 		addLuaSprite('bg', false)
 		addLuaSprite('Flooring', false)
@@ -35,3 +35,10 @@ function onCreate()
 		addLuaSprite('Lamp', true)
 	
 	end
+
+function onCreatePost( ... )
+	if boyfriendName == 'XmasDanke_Player' or dadName == 'XmasDanke_Player' then
+		doTweenY('LampY','Lamp',-900,0.00001);
+		doTweenX('LampX','Lamp',-730,0.00001);
+	end
+end
