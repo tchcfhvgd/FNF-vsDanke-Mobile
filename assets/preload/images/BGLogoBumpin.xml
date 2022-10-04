@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BGLogoBumpin.png">
+	<!-- Created with Adobe Animate version 16.5.1.104 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BGLogoBumpin0000" x="10" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0001" x="570" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0002" x="1130" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0003" x="1690" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0004" x="2250" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0005" x="2810" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0006" x="3370" y="10" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0007" x="10" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0008" x="570" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0009" x="1130" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0010" x="1690" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0011" x="2250" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0012" x="2810" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0013" x="3370" y="480" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0014" x="10" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0015" x="570" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0016" x="1130" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0017" x="1690" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0018" x="2250" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0019" x="2810" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0020" x="3370" y="950" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0021" x="10" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0022" x="570" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0023" x="1130" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0024" x="1690" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0025" x="2250" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0026" x="2810" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0027" x="3370" y="1420" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0028" x="10" y="1890" width="540" height="450"/>
+	<SubTexture name="BGLogoBumpin0029" x="10" y="1890" width="540" height="450"/>
+</TextureAtlas>

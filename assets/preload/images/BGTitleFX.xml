@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BGTitleFX.png">
+	<!-- Created with Adobe Animate version 16.5.1.104 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BGTitleFX0000" x="0" y="0" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0001" x="857" y="0" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0002" x="1714" y="0" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0003" x="2571" y="0" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0004" x="0" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0005" x="857" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0006" x="1714" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0007" x="2571" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0008" x="0" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0009" x="857" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0010" x="1714" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0011" x="2571" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0012" x="0" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0013" x="857" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0014" x="1714" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0015" x="2571" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0016" x="1714" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0017" x="857" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0018" x="0" y="1566" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0019" x="2571" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0020" x="1714" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0021" x="857" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0022" x="0" y="1044" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0023" x="2571" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0024" x="1714" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0025" x="857" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0026" x="0" y="522" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0027" x="2571" y="0" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0028" x="1714" y="0" width="857" height="522"/>
+	<SubTexture name="BGTitleFX0029" x="1714" y="0" width="857" height="522"/>
+</TextureAtlas>
