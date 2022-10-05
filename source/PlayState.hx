@@ -4633,7 +4633,7 @@ class PlayState extends MusicBeatState
 		note.hitByOpponent = true;
 
 		callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
-
+		spawnNoteSplashOnNote(note);
 		if (!note.isSustainNote)
 		{
 			note.kill();
@@ -4753,8 +4753,17 @@ class PlayState extends MusicBeatState
 	public function spawnNoteSplashOnNote(note:Note) {
 		if(ClientPrefs.noteSplashes && note != null) {
 			var strum:StrumNote = playerStrums.members[note.noteData];
-			if(strum != null) {
-				spawnNoteSplash(strum.x, strum.y, note.noteData, note);
+			
+			if(note.hitByOpponent){
+				var strum:StrumNote = opponentStrums.members[note.noteData];
+				if(strum != null) {
+					spawnNoteSplash(strum.x, strum.y, note.noteData, note);
+				}
+			}else{
+				var strum:StrumNote = playerStrums.members[note.noteData];
+				if(strum != null) {
+					spawnNoteSplash(strum.x, strum.y, note.noteData, note);
+				}
 			}
 		}
 	}

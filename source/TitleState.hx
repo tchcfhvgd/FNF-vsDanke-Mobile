@@ -300,7 +300,7 @@ class TitleState extends MusicBeatState
 		logoBl.frames = Paths.getSparrowAtlas('BGLogoBumpin');
 
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		logoBl.animation.addByPrefix('bump', 'BGLogoBumpin', 24, false);
+		logoBl.animation.addByPrefix('bump', 'BGLogoBumpin', 30, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
@@ -667,66 +667,56 @@ class TitleState extends MusicBeatState
 					//FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
-				case 2:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 15);
-					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-					#end
+				case 3:
+					createCoolText(['Team FIG'], -40);
 				// credTextShit.visible = true;
-				case 4:
-					#if PSYCH_WATERMARKS
-					addMoreText('Shadow Mario', 15);
-					addMoreText('RiverOaken', 15);
-					addMoreText('shubs', 15);
-					#else
-					addMoreText('present');
-					#end
+				case 5:
+					addMoreText('presents',-40);
+					ngSpr.visible = true;
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
-				case 5:
-					deleteCoolText();
-				// credTextShit.visible = false;
-				// credTextShit.text = 'In association \nwith';
-				// credTextShit.screenCenter();
 				case 6:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Not associated', 'with'], -40);
-					#else
-					createCoolText(['In association', 'with'], -40);
-					#end
-				case 8:
-					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
-				// credTextShit.text += '\nNewgrounds';
-				case 9:
 					deleteCoolText();
 					ngSpr.visible = false;
 				// credTextShit.visible = false;
-
+				// credTextShit.text = 'In association \nwith';
+				// credTextShit.screenCenter();
+				case 7:
+					createCoolText(['Psych Engine by']);
+				case 9:
+					addMoreText(' ');
+					addMoreText('Shadow Mario');
+					addMoreText('RiverOaken');
+					addMoreText('Yoshubs');
+					addMoreText('Other Contributors');
+				// credTextShit.text += '\nNewgrounds';
+				case 10:
+					deleteCoolText();
+				// credTextShit.visible = false;
 				// credTextShit.text = 'Shoutouts Tom Fulp';
 				// credTextShit.screenCenter();
-				case 10:
+				case 11:
 					createCoolText([curWacky[0]]);
 				// credTextShit.visible = true;
-				case 12:
+				case 13:
 					addMoreText(curWacky[1]);
 				// credTextShit.text += '\nlmao';
-				case 13:
+				case 14:
 					deleteCoolText();
 				// credTextShit.visible = false;
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
-				case 14:
+				case 15:
 					addMoreText('Friday');
 				// credTextShit.visible = true;
-				case 15:
+				case 16:
 					addMoreText('Night');
 				// credTextShit.text += '\nNight';
-				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
-
 				case 17:
+					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+				case 18:
+					deleteCoolText();
+				case 19:
 					skipIntro();
 			}
 		}
