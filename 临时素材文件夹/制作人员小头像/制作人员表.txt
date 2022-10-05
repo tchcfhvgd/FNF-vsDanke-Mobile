@@ -1,0 +1,27 @@
+DankeSnap果冻断：
+主创
+主界面，人物贴图，动画，角色配音，背景客串，对话UI，场景搭建，过场和失败音乐，部分曲目人声（"EHCO!"和"Poprocky"）
+
+FrazeRIP弗雷泽：
+主程序，曲师
+程序（自己写啦），编曲（曲目：Angelly，Party Panic2.0，Croissanta的remix，freakyMenu菜单主题曲）人声（除开我做的所有曲目），翻译，所有谱面
+
+Rabbit's Foot兔脚：
+美工
+Danke的服装设计，背景绘制，隐藏角色player-Danke贴图和动画，idle动画协助
+
+Toast吐司：
+程序
+被废弃的KE版本全部工作！（预告里的所有）
+
+FloweSans花衫：
+编曲（曲目：Raspberry PIE）
+
+特别感谢：
+NaglazYamiZaleD：编曲（曲目：旧版Croissanta，Extreme Hard Candy Overload！）
+Sharon羽麓：编曲（曲目：Poprocky）
+Pie派：谱面（"EHCO!"和"Poprocky",虽然没有用上...!）
+NihilityStar星歌：翻译（帮忙翻译了原来的剧情！虽然没有用上...）
+Violet紫糖：背景绘制（虽然也没有用上...）
+Pikaron饼饼：画了一些小部件(书法大师)和宣传图py
+Lunar_Suraface月面：程序技术支持！
