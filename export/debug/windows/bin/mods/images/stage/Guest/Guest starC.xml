@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Guest starC.png">
+	<!-- Created with Adobe Animate version 16.5.1.104 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Guest starC0000" x="100" y="100" width="395" height="400"/>
+	<SubTexture name="Guest starC0001" x="595" y="100" width="395" height="400"/>
+	<SubTexture name="Guest starC0002" x="1090" y="100" width="395" height="400"/>
+	<SubTexture name="Guest starC0003" x="100" y="600" width="395" height="400"/>
+	<SubTexture name="Guest starC0004" x="595" y="600" width="395" height="400"/>
+	<SubTexture name="Guest starC0005" x="1090" y="600" width="395" height="400"/>
+	<SubTexture name="Guest starC0006" x="100" y="1100" width="395" height="400"/>
+	<SubTexture name="Guest starC0007" x="100" y="1100" width="395" height="400"/>
+	<SubTexture name="Guest starC0008" x="100" y="1100" width="395" height="400"/>
+	<SubTexture name="Guest starC0009" x="100" y="1100" width="395" height="400"/>
+</TextureAtlas>

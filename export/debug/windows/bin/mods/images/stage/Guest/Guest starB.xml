@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Guest starB.png">
+	<!-- Created with Adobe Animate version 16.5.1.104 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Guest starB0000" x="100" y="100" width="655" height="611"/>
+	<SubTexture name="Guest starB0001" x="855" y="100" width="655" height="611"/>
+	<SubTexture name="Guest starB0002" x="100" y="811" width="655" height="611"/>
+	<SubTexture name="Guest starB0003" x="855" y="811" width="655" height="611"/>
+	<SubTexture name="Guest starB0004" x="100" y="1522" width="655" height="611"/>
+	<SubTexture name="Guest starB0005" x="855" y="1522" width="655" height="611"/>
+	<SubTexture name="Guest starB0006" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0007" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0008" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0009" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0010" x="855" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0011" x="100" y="2944" width="655" height="611"/>
+	<SubTexture name="Guest starB0012" x="855" y="2944" width="655" height="611"/>
+	<SubTexture name="Guest starB0013" x="855" y="811" width="655" height="611"/>
+	<SubTexture name="Guest starB0014" x="100" y="1522" width="655" height="611"/>
+	<SubTexture name="Guest starB0015" x="855" y="1522" width="655" height="611"/>
+	<SubTexture name="Guest starB0016" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0017" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0018" x="100" y="2233" width="655" height="611"/>
+	<SubTexture name="Guest starB0019" x="100" y="2233" width="655" height="611"/>
+</TextureAtlas>
