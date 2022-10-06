@@ -52,6 +52,7 @@ import Note.EventNote;
 import openfl.events.KeyboardEvent;
 import flixel.effects.particles.FlxEmitter;
 import flixel.effects.particles.FlxParticle;
+import flixel.addons.editors.pex.FlxPexParser;
 import flixel.util.FlxSave;
 import animateatlas.AtlasFrameMaker;
 import Achievements;
@@ -323,6 +324,19 @@ class PlayState extends MusicBeatState
 	public static var lastCombo:FlxSprite;
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
+
+	//----------------------------------------------------------------
+	 var _leftStarEmitter:FlxEmitter;
+	 var _rightStarEmitter:FlxEmitter;
+
+	public var particleAmount:Int = 35;
+
+	public var leftStarEmitterX:Float = 0;
+	public var leftStarEmitterY:Float = 0;
+
+	public var rightStarEmitterX:Float = 0;
+	public var rightStarEmitterY:Float = 0;
+	//----------------------------------------------------------------
 
 	override public function create()
 	{
@@ -1367,7 +1381,31 @@ class PlayState extends MusicBeatState
 			FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 			FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 		}
+
 		callOnLuas('onCreatePost', []);
+
+		//----------------------------------------------------------------
+		_leftStarEmitter = new FlxEmitter(leftStarEmitterX, leftStarEmitterY);
+
+		FlxPexParser.parse("shared:assets/shared/images/particles/left_star/particle.pex",
+		"shared:assets/shared/images/particles/left_star/texture.png",
+		_leftStarEmitter,1.4);
+
+		add(_leftStarEmitter);
+		_leftStarEmitter.cameras = [camHUD];
+
+		//----------------------------------------------------------------
+
+		_rightStarEmitter = new FlxEmitter(rightStarEmitterX, rightStarEmitterY);
+
+		FlxPexParser.parse("shared:assets/shared/images/particles/right_star/particle.pex",
+		"shared:assets/shared/images/particles/right_star/texture.png",
+		_rightStarEmitter,1.4);
+
+		add(_rightStarEmitter);
+		_rightStarEmitter.cameras = [camHUD];
+
+		//----------------------------------------------------------------
 
 		super.create();
 
@@ -5019,6 +5057,11 @@ class PlayState extends MusicBeatState
 	var lightningOffset:Int = 8;
 
 	var lastBeatHit:Int = -1;
+
+	public function PlayFX(){
+		_leftStarEmitter.start(true,0,particleAmount);
+		_rightStarEmitter.start(true,0,particleAmount);
+	}
 
 	override function beatHit()
 	{

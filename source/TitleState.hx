@@ -38,6 +38,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Assets;
+import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
 typedef TitleData =
@@ -60,7 +61,7 @@ class TitleState extends MusicBeatState
 
 	public static var initialized:Bool = false;
 
-	var blackScreen:FlxSprite;
+	var blackScreen:FlxBackdrop;
 	var credGroup:FlxGroup;
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
@@ -115,7 +116,7 @@ class TitleState extends MusicBeatState
 		if (sys.FileSystem.exists('mods/')) {
 			var folders:Array<String> = [];
 			for (file in sys.FileSystem.readDirectory('mods/')) {
-				var path = haxe.io.Path.join(['mods/', file]);
+				var path = haxe.io.Path.join(['mods/', file]);s
 				if (sys.FileSystem.isDirectory(path)) {
 					folders.push(file);
 				}
@@ -141,7 +142,6 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
 
 		ClientPrefs.loadPrefs();
 
@@ -174,24 +174,16 @@ class TitleState extends MusicBeatState
 		// IGNORE THIS!!!
 		titleJSON = Json.parse(Paths.getTextFromFile('images/'+_charName+'DanceTitle.json'));
 
-		#if TITLE_SCREEN_EASTER_EGG
-		if (FlxG.save.data.psychDevsEasterEgg == null) FlxG.save.data.psychDevsEasterEgg = ''; //Crash prevention
-		switch(FlxG.save.data.psychDevsEasterEgg.toUpperCase())
-		{
-			case 'SHADOW':
-				titleJSON.gfx += 210;
-				titleJSON.gfy += 40;
-			case 'RIVER':
-				titleJSON.gfx += 100;
-				titleJSON.gfy += 20;
-			case 'SHUBS':
-				titleJSON.gfx += 160;
-				titleJSON.gfy -= 10;
-			case 'BBPANZU':
-				titleJSON.gfx += 45;
-				titleJSON.gfy += 100;
+		
+		var bg:FlxBackdrop = new FlxBackdrop(Paths.image(titleJSON.backgroundSprite),1,0);
+
+		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none"){
+			//bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
+			//bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
+		}else{
+			bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		}
-		#end
+		add(bg);
 
 		if(!initialized)
 		{
@@ -283,18 +275,18 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(titleJSON.bpm);
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite();
+		// var bg:FlxSprite = new FlxSprite();
 
-		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none"){
-			bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
-		}else{
-			bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		}
+		// if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none"){
+		// 	bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
+		// }else{
+		// 	bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		// }
 
-		// bg.antialiasing = ClientPrefs.globalAntialiasing;
-		// bg.setGraphicSize(Std.int(bg.width * 0.6));
-		// bg.updateHitbox();
-		add(bg);
+		// // bg.antialiasing = ClientPrefs.globalAntialiasing;
+		// // bg.setGraphicSize(Std.int(bg.width * 0.6));
+		// // bg.updateHitbox();
+		// add(bg);
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		logoBl.frames = Paths.getSparrowAtlas('BGLogoBumpin');
@@ -308,40 +300,8 @@ class TitleState extends MusicBeatState
 
 		swagShader = new ColorSwap();
 		gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
-
-		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
-		if(easterEgg == null) easterEgg = ''; //html5 fix
-
-		switch(easterEgg.toUpperCase())
-		{
-			#if TITLE_SCREEN_EASTER_EGG
-			case 'SHADOW':
-				gfDance.frames = Paths.getSparrowAtlas('ShadowBump');
-				gfDance.animation.addByPrefix('danceLeft', 'Shadow Title Bump', 24);
-				gfDance.animation.addByPrefix('danceRight', 'Shadow Title Bump', 24);
-			case 'RIVER':
-				gfDance.frames = Paths.getSparrowAtlas('RiverBump');
-				gfDance.animation.addByIndices('danceLeft', 'River Title Bump', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-				gfDance.animation.addByIndices('danceRight', 'River Title Bump', [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-			case 'SHUBS':
-				gfDance.frames = Paths.getSparrowAtlas('ShubBump');
-				gfDance.animation.addByPrefix('danceLeft', 'Shub Title Bump', 24, false);
-				gfDance.animation.addByPrefix('danceRight', 'Shub Title Bump', 24, false);
-			case 'BBPANZU':
-				gfDance.frames = Paths.getSparrowAtlas('BBBump');
-				gfDance.animation.addByIndices('danceLeft', 'BB Title Bump', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
-				gfDance.animation.addByIndices('danceRight', 'BB Title Bump', [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
-			#end
-
-			default:
-			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
-			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
-			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
-				gfDance.frames = Paths.getSparrowAtlas(_charName+'DanceTitle');
-				// gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-				// gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-				gfDance.animation.addByPrefix('dance','dance',24,false);
-		}
+		gfDance.frames = Paths.getSparrowAtlas(_charName+'DanceTitle');
+		gfDance.animation.addByPrefix('dance','dance',24,false);
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
 
 		add(gfDance);
@@ -414,7 +374,8 @@ class TitleState extends MusicBeatState
 		add(credGroup);
 		textGroup = new FlxGroup();
 
-		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		blackScreen = new FlxBackdrop(Paths.image(titleJSON.backgroundSprite),1,0);
+
 		credGroup.add(blackScreen);
 
 		credTextShit = new Alphabet(0, 0, "", true);
@@ -645,8 +606,9 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-		if(logoBl != null)
+		if(logoBl != null&&curBeat%2 == 0){
 			logoBl.animation.play('bump', true);
+		}
 
 			if (curBeat%4 == 0){
 				gfDance.animation.play('dance',true);

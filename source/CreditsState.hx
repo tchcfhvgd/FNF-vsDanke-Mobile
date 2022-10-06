@@ -81,6 +81,22 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Team FIG'],
+			['Danke',		'danke',		'Project Owner',								'https://twitter.com/snap6910',	'B38983'],
+			['Fraze',		'fraze',		'Programmer, Composer',								'https://twitter.com/FraseXFraze',	'89A6E8'],
+			['Daytimefish Studio'],
+			['Rabbits Foot',		'rt',		'Artist',								'https://twitter.com/Kakosa_sama',	'B7E435'],
+			['Toast',		'toast',		'Programmer',								'https://twitter.com/luckyfishi_',	'D89960'],
+			['Others'],
+			['Flower Sans',		'flowesans',		'Composer',								'https://space.bilibili.com/394527354?spm_id_from=333.337.0.0',	'D89960'],
+			['Special Thanks'],
+			['DJ_KeimiliKiexie',		'keimilikiexie',		'Composer',								'',	'DB52D2'],
+			['Sharon',		'sharon',		'Composer',								'',	'7CE5F9'],
+			['Pie',		'pie',		'Charter',								'',	'FF76C5'],
+			['Nihility Star ',		'star',		'Localization',								'',	'AE5AA9'],
+			['Violet',		'violet',		'Artist',								'',	'A64F55'],
+			['Polarpm',		'pikaron',		'Artist',								'',	'9FB0DB'],
+			['Lunar_Surface',		'lunarsuraface',		'Programmer',								'',	'BD2C3F'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],

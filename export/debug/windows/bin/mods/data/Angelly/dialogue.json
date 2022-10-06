@@ -1,7 +1,7 @@
 {
 	"dialogue": [
     {
-      "expression": "talk",
+      "expression": "BG0",
       "text": "Huh, an abandoned mod with fully colored portrait dialogue?",
       "boxState": "normal",
       "sound": "",
@@ -9,7 +9,7 @@
       "portrait": "bg-dialog"
     },
     {
-      "expression": "talk",
+      "expression": "Danke0",
       "text": "Well, since I already drew them ...",
       "boxState": "normal",
       "sound": "",
@@ -25,7 +25,7 @@
 			"portrait": "Danke-dialog"
 		},
     {
-      "expression": "talk",
+      "expression": "KR0",
       "text": "Hold on, why am I being the hottress standing at the counter all of a sudden?",
       "boxState": "normal",
       "sound": "",
