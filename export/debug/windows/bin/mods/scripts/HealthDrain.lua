@@ -1,54 +1,75 @@
 
-longNoteHealthDrain = .005
-noteHealthDrain = .02
+--推条
+local ElongNoteHealthDrain = .0015 --敌方长条的扣血强度(Easy难度)
+local EnoteHealthDrain = .005		--敌方单个键的扣血强度(Easy难度)
+
+
+local NlongNoteHealthDrain = .003 --敌方长条的扣血强度(Normal难度)
+local NnoteHealthDrain = .01		--敌方单个键的扣血强度(Normal难度)
+
+
+local HlongNoteHealthDrain = .006 --敌方长条的扣血强度(Hard难度)
+local HnoteHealthDrain = .015		--敌方单个键的扣血强度(Hard难度)
+
+local isMercy = true	--改成false如果你想推条致死
+
+
+
+---------------------------------------下面不用动了
+local longNoteHealthDrain
+local noteHealthDrain
+
+function onCreatePost( ... )
+
+	if difficulty ==0 then
+	
+		longNoteHealthDrain = ElongNoteHealthDrain
+		noteHealthDrain = EnoteHealthDrain
+	end
+
+	if difficulty ==1 then
+		longNoteHealthDrain = NlongNoteHealthDrain
+		noteHealthDrain = NnoteHealthDrain
+	end
+
+	if difficulty ==2 then
+		longNoteHealthDrain = HlongNoteHealthDrain
+		noteHealthDrain = HnoteHealthDrain
+	end
+
+end
+
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
-	 health = getProperty('health')
+	 if isMercy then
+	 Mercy()
+	 else
+	 NoMercy()
+	 end
 	 
-	if difficulty ==0 then
-		longNoteHealthDrain = .001
-		noteHealthDrain = .004
-	end
-	if difficulty ==1 then
-		longNoteHealthDrain = .002
-		noteHealthDrain = .008
+end
 
-	end
-	if difficulty ==2 then
-		longNoteHealthDrain = .003
-		noteHealthDrain = .012
-	end
-
-
+function NoMercy( ... )
+	 health = getProperty('health')
 	 if isSustainNote == true then
-		if getProperty('health')>0.02 then
+		
 		setProperty('health', health- longNoteHealthDrain)
-		end
 		else
-		if getProperty('health')>0.025 then
 		setProperty('health', health- noteHealthDrain)
-		end
 	 end
 end
 
-function  onUpdate(elapsed)
-	if curBeat >=280 and curBeat <=336 then
-	
-		 health = getProperty('health')
-		if health>0.1 then
-		setProperty('health', health-elapsed*0.39)
-		end
-	end
-
-	if curBeat >=336 and curBeat <=368 then
-	
-		 health = getProperty('health')
-		if health>0.1 then
-		setProperty('health', health-elapsed*0.19)
-		end
-	end
-
-
-
+function Mercy( ... )
+	 health = getProperty('health')
+	 if isSustainNote == true then
+			if health >longNoteHealthDrain then
+				setProperty('health', health- longNoteHealthDrain)
+			end
+		else
+			if health >noteHealthDrain then
+				setProperty('health', health- noteHealthDrain)
+			end
+	 end
 end
+
 

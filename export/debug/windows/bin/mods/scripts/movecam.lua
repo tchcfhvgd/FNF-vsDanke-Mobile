@@ -12,6 +12,9 @@ local camlocky = 0
 local camlock = false
 local bfturn = false
 
+local midCampointX = 0;
+local midCampointY = 0;
+
 	
 function onMoveCamera(focus)
 	if focus == 'boyfriend' then

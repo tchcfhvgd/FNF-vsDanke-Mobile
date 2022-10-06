@@ -15,6 +15,12 @@ function onCreate()
 
 end
 function onGameOver()
-	playSound('fnf_loss_sfx',1)
+	--playSound('fnf_loss_sfx',1)
+
+	makeAnimatedLuaSprite('RETRY', 'RETRY',0, 0)
+	addAnimationByPrefix('RETRY', 'RETRY', 'RETRY', 24, true)
+    setObjectCamera('RETRY','other')
+	addLuaSprite('RETRY', false)
+
 	return Function_Continue;
 end

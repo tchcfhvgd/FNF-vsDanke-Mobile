@@ -8,6 +8,7 @@ import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
+import flixel.FlxSprite;
 import flixel.tweens.FlxTween;
 
 class GameOverSubstate extends MusicBeatSubstate
@@ -26,6 +27,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var endSoundName:String = 'gameOverEnd';
 
 	public static var instance:GameOverSubstate;
+
+	var _RETRY:FlxSprite;
 
 	public static function resetVariables() {
 		characterName = 'bf-dead';
@@ -56,6 +59,15 @@ class GameOverSubstate extends MusicBeatSubstate
 		add(boyfriend);
 
 		camFollow = new FlxPoint(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
+
+		
+		_RETRY = new FlxSprite(boyfriend.getGraphicMidpoint().x-700, boyfriend.getGraphicMidpoint().y-450);
+		_RETRY.frames = Paths.getSparrowAtlas('RETRY');
+		_RETRY.animation.addByPrefix('RETRY?', 'RETRY?', 24,true);
+		_RETRY.animation.addByPrefix('RETRY!', 'RETRY!', 24,true);
+		_RETRY.animation.play('RETRY?');
+		_RETRY.alpha = 0;
+		add(_RETRY);
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
 		Conductor.changeBPM(100);
@@ -119,7 +131,7 @@ class GameOverSubstate extends MusicBeatSubstate
 				{
 					playingDeathSound = true;
 					coolStartDeath(0.2);
-					
+
 					var exclude:Array<Int> = [];
 					//if(!ClientPrefs.cursing) exclude = [1, 3, 8, 13, 17, 21];
 
@@ -157,6 +169,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	function coolStartDeath(?volume:Float = 1):Void
 	{
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		FlxTween.tween(_RETRY, {alpha : 1}, .5);
 	}
 
 	function endBullshit():Void
@@ -165,6 +178,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		{
 			isEnding = true;
 			boyfriend.playAnim('deathConfirm', true);
+			_RETRY.animation.play('RETRY!');
 			FlxG.sound.music.stop();
 			FlxG.sound.play(Paths.music(endSoundName));
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)

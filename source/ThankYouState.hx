@@ -48,7 +48,7 @@ class ThankYouState extends MusicBeatState
         warningInfo.loadGraphic(Paths.image('ThankU'));
         warningInfo.alpha = 0;
         add(warningInfo);
-        FlxTween.tween(warningInfo,{alpha:1},1,{onComplete:function(twn:FlxTween){youCanPreesed=true;}});
+        FlxTween.tween(warningInfo,{alpha:1},.5,{onComplete:function(twn:FlxTween){youCanPreesed=true;}});
 
     }
 
@@ -63,7 +63,7 @@ class ThankYouState extends MusicBeatState
                 FlxG.camera.flash(FlxColor.BLACK, 2);
                 new FlxTimer().start(2, function(tmr:FlxTimer)
                     {
-                        FlxTween.tween(warningInfo,{alpha:0},1,{onComplete:function(twn:FlxTween){LoadingState.loadAndSwitchState(new TitleState());}});
+                        FlxTween.tween(warningInfo,{alpha:0},.5,{onComplete:function(twn:FlxTween){LoadingState.loadAndSwitchState(new TitleState());}});
                     });
             }
         }

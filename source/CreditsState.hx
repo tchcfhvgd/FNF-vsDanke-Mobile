@@ -95,7 +95,7 @@ class CreditsState extends MusicBeatState
 			['Pie',		'pie',		'Charter',								'',	'FF76C5'],
 			['Nihility Star ',		'star',		'Localization',								'',	'AE5AA9'],
 			['Violet',		'violet',		'Artist',								'',	'A64F55'],
-			['Polarpm',		'pikaron',		'Artist',								'',	'9FB0DB'],
+			['Pikaron',		'pikaron',		'Artist',								'',	'9FB0DB'],
 			['Lunar_Surface',		'lunarsuraface',		'Programmer',								'',	'BD2C3F'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
