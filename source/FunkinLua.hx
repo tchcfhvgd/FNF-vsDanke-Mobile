@@ -1562,8 +1562,13 @@ class FunkinLua {
 			WeekData.loadTheFirstEnabledMod();
 			return true;
 		});
+
 		Lua_helper.add_callback(lua, "getSongPosition", function() {
 			return Conductor.songPosition;
+		});
+
+		Lua_helper.add_callback(lua, "playFX", function() {
+			PlayState.instance.playFX();
 		});
 
 		Lua_helper.add_callback(lua, "getCharacterX", function(type:String) {

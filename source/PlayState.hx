@@ -336,6 +336,8 @@ class PlayState extends MusicBeatState
 
 	public var rightStarEmitterX:Float = 0;
 	public var rightStarEmitterY:Float = 0;
+
+	public var isPlayFX:Bool = false;
 	//----------------------------------------------------------------
 
 	override public function create()
@@ -5058,9 +5060,12 @@ class PlayState extends MusicBeatState
 
 	var lastBeatHit:Int = -1;
 
-	public function PlayFX(){
-		_leftStarEmitter.start(true,0,particleAmount);
-		_rightStarEmitter.start(true,0,particleAmount);
+	public function playFX(){
+		if(isPlayFX){
+			_leftStarEmitter.start(true,0,particleAmount);
+			_rightStarEmitter.start(true,0,particleAmount);
+		}
+		isPlayFX = false;
 	}
 
 	override function beatHit()
@@ -5187,6 +5192,8 @@ class PlayState extends MusicBeatState
 		
 		setOnLuas('curSection', curSection);
 		callOnLuas('onSectionHit', []);
+		playFX();
+		
 	}
 
 	public function callOnLuas(event:String, args:Array<Dynamic>, ignoreStops = true, exclusions:Array<String> = null):Dynamic {
