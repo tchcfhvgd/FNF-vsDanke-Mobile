@@ -94,4 +94,6 @@ function onUpdate()
 	setProperty('camFollow.y', camlocky)
 	end
 end
+
+
 	-- cringe camera EWW --

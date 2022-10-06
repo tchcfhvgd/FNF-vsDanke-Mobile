@@ -31,7 +31,7 @@ function onBeatHit( ... )
 end
 
 function DOIT( ... )
-	cameraFlash('hud','FFEBC4',.75)
+	cameraFlash('hud','8A7752',.75)
 	--doTweenAlpha('WhiteEdgeAStart', 'WhiteEdge', .6, 0.001)
 	setProperty('isPlayFX',true)
 end

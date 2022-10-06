@@ -306,8 +306,10 @@ class TitleState extends MusicBeatState
 
 		add(gfDance);
 		gfDance.shader = swagShader.shader;
+		gfDance.animation.play('dance');
 		add(logoBl);
 		logoBl.shader = swagShader.shader;
+		logoBl.animation.play('bump');
 
 		_shiningFX = new FlxSprite(0, 0);
 		_shiningFX.frames = Paths.getSparrowAtlas('BGTitleFX');

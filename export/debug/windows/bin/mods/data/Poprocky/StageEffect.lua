@@ -1,7 +1,6 @@
 
 function onBeatHit( ... )
 	if curBeat == 232 then
-	DOIT()
 	StarFXEnable(true)
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', .3, 2,'cubeOut')
 	end
@@ -20,7 +19,6 @@ function onBeatHit( ... )
 
 	if curBeat == 360 then
 	StarFXEnable(false)
-	DOIT()
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', 0, 2,'cubeOut')
 	end
 	
@@ -28,7 +26,7 @@ function onBeatHit( ... )
 end
 
 function DOIT( ... )
-	cameraFlash('hud','FFEBC4',.75)
+	cameraFlash('hud','F4C978',.75)
 	--doTweenAlpha('WhiteEdgeAStart', 'WhiteEdge', .6, 0.001)
 	setProperty('isPlayFX',true)
 end
