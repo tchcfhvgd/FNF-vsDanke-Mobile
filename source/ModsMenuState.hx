@@ -377,6 +377,9 @@ class ModsMenuState extends MusicBeatState
 
 		FlxG.mouse.visible = true;
 
+		addTouchPad(!noModsTxt.visible ? "UP_DOWN" : "NONE", "B");
+		addTouchPadCamera();
+		
 		super.create();
 	}
 

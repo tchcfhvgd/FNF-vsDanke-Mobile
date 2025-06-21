@@ -26,6 +26,7 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 import lime.utils.Assets;
+import mobile.TouchUtil;
 
 using StringTools;
 class ThankYouState extends MusicBeatState
@@ -56,8 +57,7 @@ class ThankYouState extends MusicBeatState
     {        
         if(youCanPreesed)
         {
-            if(FlxG.keys.justPressed.ANY)
-            {
+            if(FlxG.keys.justPressed.ANY || TouchUtil.justPressed)            {
                 youCanPreesed=false;
                 FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
                 FlxG.camera.flash(FlxColor.BLACK, 2);
