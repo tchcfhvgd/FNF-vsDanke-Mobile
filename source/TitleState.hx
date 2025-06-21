@@ -194,6 +194,7 @@ class TitleState extends MusicBeatState
 			}
 			persistentUpdate = true;
 			persistentDraw = true;
+			mobile.MobileData.init();
 		}
 
 		if (FlxG.save.data.weekCompleted != null)
@@ -322,15 +323,15 @@ class TitleState extends MusicBeatState
 		_shiningFX.antialiasing = ClientPrefs.globalAntialiasing;
 
 		titleText = new FlxSprite(titleJSON.startx, titleJSON.starty);
-		#if (desktop && MODS_ALLOWED)
-		var path = "mods/" + Paths.currentModDirectory + "/images/"+_charName+"titleEnter.png";
+		#if MODS_ALLOWED
+		var path = #if mobile Sys.getCwd() + #end "mods/" + Paths.currentModDirectory + "/images/"+_charName+"titleEnter.png";
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "mods/images/"+_charName+"titleEnter.png";
+			path = #if mobile Sys.getCwd() + #end "mods/images/"+_charName+"titleEnter.png";
 		}
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "assets/images/"+_charName+"titleEnter.png";
+			path = #if mobile Sys.getCwd() + #end "assets/images/"+_charName+"titleEnter.png";
 		}
 		//trace(path, FileSystem.exists(path));
 		titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
