@@ -1,23 +1,23 @@
 
 function onBeatHit( ... )
-	if curBeat == 232 then
+	if curBeat == 96 then
 	StarFXEnable(true)
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', .3, 2,'cubeOut')
 	end
 
 
-	if curBeat == 296 then 
+	if curBeat == 160 then 
 	StarFXEnable(false)
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', 0, 2,'cubeOut')
 	end
 	
-	if curBeat == 304 then
+	if curBeat == 320 then
 	StarFXEnable(true)
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', .3, 2,'cubeOut')
 	end
 
 
-	if curBeat == 360 then
+	if curBeat == 384 then
 	StarFXEnable(false)
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', 0, 2,'cubeOut')
 	end

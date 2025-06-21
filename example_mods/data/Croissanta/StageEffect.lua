@@ -13,6 +13,7 @@ function onBeatHit( ... )
 
 	if curBeat == 392 then
 	StarFXEnable(false)
+	DOIT()
 	doTweenAlpha('WhiteEdgeA', 'WhiteEdge', 0, 2,'cubeOut')
 	end
 
